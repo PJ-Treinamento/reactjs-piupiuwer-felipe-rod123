@@ -1,0 +1,111 @@
+.menu{
+   background: var(--color-primary);
+   border-radius: 0 0 6.4rem 6.4rem;
+   /* border-radius: 0; */ /*Quando "esconder" as opções!*/
+}
+
+.nav-bar{
+   width: 100vw;
+   height: 20vh;
+
+   display: flex;
+   justify-content: center;
+   align-content: center;
+
+}
+
+#logo-img{
+   width: 20rem;
+}
+
+#options-img{
+   position: absolute;
+   align-self: center;
+   left: 3.2rem;
+   width: 4.2rem;
+}
+
+.menu-options{
+   width: 100vw;
+
+   display: flex;
+   justify-content: center;
+   align-content: center;
+
+   color: var(--color-text);
+
+   animation: 0.6s;
+}
+
+.menu-options ul{
+   text-decoration: none;
+   list-style-type: none;
+   margin-left: 3.2rem;
+   margin-top: 1.6rem;
+   color: var(--color-text-in-primary);
+   font: 400 2.4rem Poppins;
+}
+
+.menu-options li{
+   line-height: 4.8rem;
+}
+
+#logout-button{
+   color: var(--color-button);
+   font: 400 1.6rem Poppins;
+   margin-bottom: 4rem;
+   margin-top: 3.2rem;
+}
+
+@media (min-width: 700px) {
+   .menu{
+      position: absolute;
+      left: 0;
+      background-color: var(--color-primary);
+      width: 24rem;
+      border-radius: 0;
+   }
+   
+   .nav-bar{
+      height: 15vh;
+      display: flex;
+   }
+   
+   #logo-img{
+      width: 70%;
+      position: absolute;
+      left: 3.2rem;
+      margin-top: 3.2rem;
+   }
+   
+   #options-img{
+      display: none;
+   }
+   
+   .menu-options{
+      height: 85vh;
+      margin-top: 2.4rem;
+      display: flex;
+      justify-content: left;
+
+      color: var(--color-text);
+   }
+   
+   .menu-options ul{
+      text-decoration: none;
+      list-style-type: none;
+      margin-left: 3.2rem;
+      align-content: space-between;
+      color: var(--color-text-in-primary);
+      font: 400 1.8rem Poppins;
+   }
+   
+   .menu-options li{
+      line-height: 4rem;
+   }
+   
+   #logout-button{
+      color: var(--color-button);
+      font: 400 1.6rem Poppins;
+   }
+}
