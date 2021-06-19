@@ -1,0 +1,134 @@
+.post{
+   width: 64vw;
+   height: 56vh;
+
+   background-color: var(--color-primary-dark);
+   font: 400 1.6rem Nunito;
+   color: var(--color-text-lighter);
+
+   display: flex;
+   justify-self: center;
+   align-self: center;
+
+   border-radius: 5.6rem;
+   margin: 1.6rem;
+   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.05), 0 6px 20px 0 rgba(0, 0, 0, 0.05);
+}
+
+.post-footer{
+   position: absolute;
+   display: flex;
+   width: 60vw;
+   margin: 2.4rem;
+
+   align-self: flex-end;
+   justify-content: space-between;
+}
+
+.like-container{
+   margin-left: 1.2rem;
+   display: flex;
+   width: fit-content;
+   align-content: center;
+   justify-content: space-evenly;
+}
+
+.like-container span{
+   margin: 0.8rem;
+   justify-self: center;
+   align-self: center;
+   text-align: center;
+   font: 400 1.4rem Poppins;
+   color: var(--color-text-lighter);
+}
+
+.like-button{
+   background: none;
+   border-style: none;
+}
+
+.like-button img{
+   width: 3.2rem;
+}
+
+.favorite-container{
+   width: fit-content;
+   margin-right: 2.4rem;
+}
+
+.favorite-button{
+   background: none;
+   border-style: none;
+}
+
+.favorite-button img{
+   width: 3.2rem;
+}
+
+.delete-button-container{
+   width: fit-content;
+   height: fit-content;
+   margin-top: 2.4rem;
+   position: absolute;
+   margin-left: 56vw;
+   
+}
+
+.delete-button{
+   width: fit-content;
+   background: none;
+   border-style: none;
+   color: var(--color-button);
+   font: 600 1.3rem Nunito;
+}
+
+.message-container{
+   width: 58vw;
+   height: 24vh;
+
+   position: absolute;
+   margin-left: 4rem;
+
+   margin-top: 4.8rem;
+   align-self: center;
+}
+
+.message-container p{
+   margin: 0.8rem;
+   color: var(--color-text-lighter);
+   font: 400 2rem Nunito;
+
+   text-overflow: clip;
+   word-break: break-all;
+}
+
+@media (max-width: 700px) {
+   .post{
+      width: 80vw;
+      height: 56vh;
+   
+      display: flex;
+      justify-self: center;
+      align-self: center;
+      margin-left: 10%;
+
+      border-radius: 4.8rem;
+   }
+
+   .delete-button-container{
+      position: absolute;
+      margin-left: 64vw;
+   }
+
+   .favorite-container{
+      position: absolute;
+      margin-left: 62vw;
+   }
+
+   .message-container{
+      width: 64vw;
+  
+      margin-bottom: 6.4rem;
+      align-self: center;
+   }
+}

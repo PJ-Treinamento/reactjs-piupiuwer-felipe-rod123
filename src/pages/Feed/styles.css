@@ -1,11 +1,29 @@
-#page-landing{
+#page-feed{
    width: 100vw;
    height: 100vh;
 
    display: flex;
-   /* justify-content: center;
-   align-items: center; */
+   justify-content: center;
 
    color: var(--color-text);
    background: var(--color-background);
+}
+
+.posts-container{
+   width: 100vw;
+   position: absolute;
+   right: 0;
+}
+
+@media(min-width: 700px){
+   .posts-container{
+      width: 76.7vw;
+      
+      display: flex;
+      justify-content: center;
+      justify-self: right;
+
+      margin-top: 3.2rem;
+      margin-bottom: 3.2rem;
+   }
 }
