@@ -95,15 +95,22 @@
    
    .menu-options ul{
       text-decoration: none;
-      list-style-type: none;
-      margin-left: 3.2rem;
-      align-content: space-between;
-      color: var(--color-text);
-      font: 400 1.8rem Poppins;
+      list-style-type: none;     
    }
    
    .menu-options li{
       line-height: 4rem;
+   }
+   
+   .menu-options li button{
+      margin-bottom: 0.8vw;
+      width: fit-content;
+      background: none;
+      border-style: none;
+
+      align-content: space-between;
+      color: var(--color-text);
+      font: 400 1.6vw Poppins;
    }
    
    #logout-button{

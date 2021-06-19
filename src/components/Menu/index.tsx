@@ -16,12 +16,12 @@ export default function Menu(){
 
          <div className="menu-options">
             <ul>
-               <li>Meu perfil</li>
-               <li>Minha atividade</li>
-               <li>Configurações</li>
-               <li>Ajuda</li>
-               <li>Idioma</li>
-               <li id="logout-button">Sair</li>
+               <li><button>Meu perfil</button></li>
+               <li><button>Minha atividade</button></li>
+               <li><button>Configurações</button></li>
+               <li><button>Ajuda</button></li>
+               <li><button>Idioma</button></li>
+               <li><button id="logout-button">Sair</button></li>
             </ul>
          </div>
       </div>

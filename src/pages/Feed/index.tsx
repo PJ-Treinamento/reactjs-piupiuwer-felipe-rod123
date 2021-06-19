@@ -12,12 +12,12 @@ function Feed(){
          <div id="page-feed-content" className="container">
             <Menu/>
 
-            <div className="add-post-container">
-               <AddPost/>
-            </div>
-
             <div className="search-container">
                <SearchBox/>
+            </div>
+
+            <div className="add-post-container">
+               <AddPost/>
             </div>
 
             <div className="posts-container">

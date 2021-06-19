@@ -1,34 +1,8 @@
-/* .addPost{
-   display: flex;
-   direction: ltr;
-   align-items: center;
-   margin-left: 7%;
-}
-
-.addPost a{
-   text-decoration: none;
-}
-
-.addPost img{
-   width: 60%;
-   margin-right: 2%;
-}
-
-.addPost h1{
-   text-decoration: none;
-   text-align: left;
-   font-family: 'Nunito', sans-serif;
-   font-size: x-large;
-   color: rgba(41, 50, 65, 0.8);
-} */
-
 .add-post-container{
    display: inline-flex;
-   width: 100vw;
-   justify-self: center;
-   justify-content: center;
+   width: fit-content;
+   margin-left: 15vw;
    align-content: center;
-   margin-top: 2.4rem;
 }
 
 .add-post-button{
@@ -37,7 +11,7 @@
 }
 
 .add-post-button img{
-   width: 5.6rem;
+   width: 5.2rem;
 }
 
 .add-post-container h1{
@@ -45,4 +19,27 @@
    color: var(--color-text-title);
    align-self: center;
    margin-left: 1.6rem;
+}
+
+@media (max-width: 700px) {
+   .add-post-container{
+      display: inline-flex;
+      margin-left: 5.6vw;
+      width: fit-content;
+      height: fit-content;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+   }
+
+   .add-post-button img{
+      width: 4.8rem;
+   }
+   
+   .add-post-container h1{
+      font: 600 2.4rem Nunito;
+      color: var(--color-text-title);
+      align-self: center;
+      margin-left: 1.6rem;
+   }
 }

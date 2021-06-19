@@ -1,20 +1,20 @@
-/*#region Search*/
+.search-box-container{
+   margin-top: 2.4rem;
+   margin-bottom: 2.4rem;
+   display: inline-flex;
+   margin-left: 22vw;
+   width: 78vw;
+   height: fit-content;
 
-.feed{
-   width: 80%;
-   margin-left: 20%;
-   text-align: center;
+   display: flex;
+   align-items: center;
+   justify-content: center;
 }
 
-.searchBox{
-   padding-top: 50px;
-   margin-left: auto;
-   margin-right: auto;
-   margin-bottom: 3%;
-   margin-top: 1%;
-
-   width: 80%;
-   height: 15px;
+.search-box{
+   display: inline-flex;
+   width: 64vw;
+   height: 10vh;
    background-color: rgba(255, 255, 255, 0.4);
    
    display: flex;
@@ -24,40 +24,45 @@
    border-radius: 100px;
    border-width: 3px;
    border-style: solid;
-   border-color: #3D5A80;
+   border-color: var(--color-primary-dark);
 }
 
-.searchBox a{
-   font-size: 5px;
+.search-box img{
+   width: 2.4rem;
+   margin-right: 0.8rem;
+   margin-top: 0.4rem;
 }
 
-.searchBox img{
-   width: 16%;
-   position: relative;
-   /*left: 60px;*/
-   left: 40%;
-}
-
-.searchBox input{
+.search-box input{
    flex:1;
-   height: 40px;
-   width: 80px;
+   height: 4rem;
+   width: 8rem;
    border: none;
    outline: none;
-   font-size: 18px;
-   padding-left: 10px;
+
+   padding-left: 0.8rem;
    background-color: rgba(255, 255, 255, 0.4);
-   text-decoration: rgb(255, 255, 255);
+   font: 600 1.6rem Nunito;
+   color: var(--color-text-lighter);
 }
 
-#displayResult{
-   display: block;
-   width: 90%;
-   text-align: center;
-   font-family: 'Nunito', sans-serif;
-   color: #EE6C4D;
-   font-size: large;
-   margin-bottom: 2%;
+.search-box button{
+   background: none;
+   border-style: none;
 }
 
-/*#endregion*/
+@media (max-width: 700px) {
+   .search-box-container{
+      display: inline-flex;
+      margin-left: 11vw;
+      width: 78vw;
+      height: fit-content;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+   }
+
+   .search-box{
+      width: 128vw;
+   }
+}
