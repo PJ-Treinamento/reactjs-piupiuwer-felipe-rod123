@@ -61,11 +61,12 @@
 
 @media (min-width: 700px) {
    .menu{
-      position: absolute;
+      position: fixed;
       left: 0;
       background-color: var(--color-primary);
       width: 22vw;
       border-radius: 0;
+      height: 100%;
    }
    
    .nav-bar{
