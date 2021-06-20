@@ -21,6 +21,11 @@
    font: 600 2.4rem Nunito;
 }
 
+.user-profile img:hover{
+   width: 6.7rem;
+   animation: ease-in-out;
+}
+
 @media (max-width: 700px) {
    .user-profile img{
       width: 4rem;

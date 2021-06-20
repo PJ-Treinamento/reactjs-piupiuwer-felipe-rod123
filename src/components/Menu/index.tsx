@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 import './styles.css';
 
@@ -16,12 +17,12 @@ export default function Menu(){
 
          <div className="menu-options">
             <ul>
-               <li><button>Meu perfil</button></li>
-               <li><button>Minha atividade</button></li>
-               <li><button>Configurações</button></li>
-               <li><button>Ajuda</button></li>
-               <li><button>Idioma</button></li>
-               <li><button id="logout-button">Sair</button></li>
+               <li><Link to=''>Meu perfil</Link></li>
+               <li><Link to=''>Minha atividade</Link></li>
+               <li><Link to=''>Configurações</Link></li>
+               <li><Link to=''>Ajuda</Link></li>
+               <li><Link to=''>Idioma</Link></li>
+               <li><Link to='' id="logout-button">Sair</Link></li>
             </ul>
          </div>
       </div>

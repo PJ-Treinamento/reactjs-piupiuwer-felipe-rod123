@@ -1,5 +1,5 @@
 import React from "react";
-import UserProfile from "../UserProfile";
+import User from "../User";
 
 import './styles.css';
 
@@ -8,18 +8,30 @@ import likedImg from '../../assets/icons/liked.svg';
 
 import favoriteImg from '../../assets/icons/favorite.svg';
 import favoriteFullImg from '../../assets/icons/favoriteFull.svg';
+import PiuLike from "../PiuLike";
 
-export default function Piu(){
+interface PiuProps{
+   // id: string;
+	// user: typeof User;
+	// likes: PiuLike[];
+	// text: string;
+	// created_at: Date;
+	// updated_at: Date;
+}
+
+const Piu: React.FC<PiuProps> = (PiuProps) => {
    return(
       <div className="piu">
          <div className="post">
-            <UserProfile/>
+            <User/>
+            
             <div className="delete-button-container">
                <button className="delete-button">Excluir</button>
             </div>
             
             <div className="message-container">
-               <p>aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa</p>
+               <p>Texto da mensagem</p>
+               {/* <p>{PiuProps.text}</p> */}
             </div>
             
             <div className="post-footer">
@@ -29,6 +41,7 @@ export default function Piu(){
                   </button>
 
                   <span>123 pessoas curtiram isso</span>
+                  {/* <span>{PiuProps.likes} pessoas curtiram isso</span> */}
                </div>
 
                <div className="favorite-container">
@@ -42,3 +55,5 @@ export default function Piu(){
       </div>
    );
 }
+
+export default Piu;

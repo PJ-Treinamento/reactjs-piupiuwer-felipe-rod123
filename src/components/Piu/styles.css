@@ -47,6 +47,12 @@
    border-style: none;
 }
 
+.like-button img:hover{
+   width: 3.4rem;
+   border-style: none;
+}
+
+
 .like-button img{
    width: 3.2rem;
 }
@@ -65,6 +71,11 @@
    width: 3.2rem;
 }
 
+.favorite-button img:hover{
+   width: 3.4rem;
+   border-style: none;
+}
+
 .delete-button-container{
    width: fit-content;
    height: fit-content;
@@ -80,6 +91,10 @@
    border-style: none;
    color: var(--color-button);
    font: 600 1.3rem Nunito;
+}
+
+.delete-button:hover{
+   font-size: 1.4rem;
 }
 
 .message-container{

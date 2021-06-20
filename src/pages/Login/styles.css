@@ -1,0 +1,153 @@
+.login{
+   width: 100vw;
+   display: flex;
+   background-color: var(--color-primary);
+   justify-content: center;
+}
+
+.logo-container{
+   width: 100vw;
+   position: absolute;
+   top: 0;
+   left: 0;
+   text-align: center;
+}
+
+.logo-container img{
+   width: 50rem;
+   margin-top: 4rem;
+}
+
+.title-container{
+   width: 100vw;
+   position: absolute;
+   top: 18rem;
+   display: flex;
+
+   align-self: center;
+   justify-content: center;
+
+   font: 800 3.2rem Nunito;
+   color: var(--color-button);
+}
+
+.email-container{
+   width: 100vw;
+   position: absolute;
+   top: 27rem;
+   left: 0;
+   display: flex;
+
+   align-self: center;
+   justify-content: center;
+}
+
+#email-input{
+   display: inline-flex;
+   width: 40vw;
+   height: 10vh;
+   
+   display: flex;
+   align-items: center;
+   padding: 2rem;
+   background-color: var(--color-primary-light);
+
+   border-radius: 100px;
+   border-style: none;
+   border-color: none;
+}
+
+.password-container{
+   width: 100vw;
+   position: absolute;
+   top: 34rem;
+   left: 0;
+   display: flex;
+
+   align-self: center;
+   justify-content: center;
+}
+
+#password-input{
+   display: inline-flex;
+   width: 40vw;
+   height: 10vh;
+   
+   display: flex;
+   align-items: center;
+   padding: 2rem;
+   background-color: var(--color-primary-light);
+
+   border-radius: 100px;
+   border-style: none;
+   border-color: none;
+}
+
+.login-button-container{
+   width: 100vw;
+   margin-top: 1.6rem;
+   position: absolute;
+   bottom: 5rem;
+   display: flex;
+   align-self: center;
+   justify-content: center;
+
+}
+
+button{
+   height: fit-content;
+   align-self: flex-end;
+   justify-self: center;
+   background: none;
+   border-style: none;
+   border-color: none;
+}
+
+button img:hover{
+   width: 7.5rem;
+}
+
+button img{
+   width: 7.2rem;
+}
+
+.forgot-password-container{
+   width: 100vw;
+   position: absolute;
+   margin-top: 1.6rem;
+   bottom: 14.6rem;
+   left: 0;
+   display: flex;
+
+   align-self: center;
+   justify-content: center;
+}
+
+.forgot-password-container a{
+   text-decoration: none;
+   font: 400 1.6rem Nunito;
+   color: var(--color-primary-dark);
+}
+
+@media (max-width: 700px) {
+   .logo-container img{
+      width: 35rem;
+      margin-top: 8rem;
+   }
+   
+   .title-container{
+      position: absolute;
+      top: 20rem;
+      display: flex;
+   
+      font: 800 2.4rem Nunito;
+      color: var(--color-button);
+   }
+   
+   #email-input{
+      width: 80vw;
+   }
+   #password-input{
+      width: 80vw;
+   }
+}
