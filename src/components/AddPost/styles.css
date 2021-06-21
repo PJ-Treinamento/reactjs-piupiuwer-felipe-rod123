@@ -14,10 +14,6 @@
    width: 5.2rem;
 }
 
-.add-post-button img:hover{
-   width: 5.4rem;
-}
-
 .add-post-container h1{
    font: 600 3.2rem Nunito;
    color: var(--color-text-title);

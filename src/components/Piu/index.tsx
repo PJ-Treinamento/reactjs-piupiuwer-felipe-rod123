@@ -1,37 +1,41 @@
-import React from "react";
-import User from "../User";
+import React, { useEffect, useState } from "react";
+import axios, { AxiosResponse } from "axios";
+
 
 import './styles.css';
 
 import likeImg from '../../assets/icons/like.svg';
 import likedImg from '../../assets/icons/liked.svg';
-
 import favoriteImg from '../../assets/icons/favorite.svg';
 import favoriteFullImg from '../../assets/icons/favoriteFull.svg';
-import PiuLike from "../PiuLike";
 
-interface PiuProps{
-   // id: string;
-	// user: typeof User;
-	// likes: PiuLike[];
-	// text: string;
-	// created_at: Date;
-	// updated_at: Date;
+import PiuLike from "../PiuLike";
+import User from "../User";
+import api from "../../services/api";
+
+
+export interface PiuProps {
+	id: string;
+	user: typeof User;
+	likes: typeof PiuLike[];
+	text: string;
+	created_at: Date;
+	updated_at: Date;
 }
 
 const Piu: React.FC<PiuProps> = (PiuProps) => {
+
    return(
       <div className="piu">
          <div className="post">
-            <User/>
+            <User />
             
             <div className="delete-button-container">
                <button className="delete-button">Excluir</button>
             </div>
             
             <div className="message-container">
-               <p>Texto da mensagem</p>
-               {/* <p>{PiuProps.text}</p> */}
+               <p>{PiuProps.text}</p>
             </div>
             
             <div className="post-footer">
@@ -40,8 +44,7 @@ const Piu: React.FC<PiuProps> = (PiuProps) => {
                      <img src={likeImg} alt="Curtir" />
                   </button>
 
-                  <span>123 pessoas curtiram isso</span>
-                  {/* <span>{PiuProps.likes} pessoas curtiram isso</span> */}
+                  <span>{PiuProps.likes.length} pessoas curtiram isso</span>
                </div>
 
                <div className="favorite-container">

@@ -30,7 +30,6 @@
 .search-box img{
    width: 2.4rem;
    margin-right: 0.8rem;
-   margin-top: 0.4rem;
 }
 
 .search-box input{
@@ -49,7 +48,11 @@
 .search-box button{
    background: none;
    border-style: none;
+   width: fit-content;
+   height: fit-content;
+   margin-top: 0.8rem;
 }
+
 
 @media (max-width: 700px) {
    .search-box-container{

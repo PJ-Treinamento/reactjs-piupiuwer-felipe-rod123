@@ -94,7 +94,7 @@
 
 }
 
-button{
+#login-button {
    height: fit-content;
    align-self: flex-end;
    justify-self: center;
@@ -103,11 +103,11 @@ button{
    border-color: none;
 }
 
-button img:hover{
+#login-button img:hover{
    width: 7.5rem;
 }
 
-button img{
+#login-button img{
    width: 7.2rem;
 }
 
