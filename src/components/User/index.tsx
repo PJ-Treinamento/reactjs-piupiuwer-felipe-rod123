@@ -24,8 +24,7 @@ const User: React.FC<UserProps> = (UserProps) =>{
 	return(
       <div className="user-profile">
 			<img src={avatarImg} alt="Foto de perfil" />
-			<h2>{UserProps.username}</h2>
-         
+			<h2>{}</h2>
       </div>
    );
 }

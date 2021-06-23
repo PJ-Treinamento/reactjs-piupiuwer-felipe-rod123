@@ -50,7 +50,22 @@ const Feed = () => {
                               <li><Piu
                                  key = {piu.id}
                                  id= {piu.id}
-                                 user= {piu.user}
+                                 user= {
+                                    {  id: piu.user.id,
+                                       username: piu.user.username,
+                                       first_name: piu.user.first_name,
+                                       last_name: piu.user.last_name,
+                                       email: piu.user.email,
+                                       about: piu.user.about,
+                                       photo: piu.user.photo,
+                                       pius: piu.user.pius,
+                                       likes: piu.user.likes,
+                                       following: piu.user.following,
+                                       followers: piu.user.followers,
+                                       favorites: piu.user.favorites
+                                    
+                                    }
+                                 }
                                  likes= {piu.likes}
                                  text= {piu.text}
                                  created_at= {piu.created_at}

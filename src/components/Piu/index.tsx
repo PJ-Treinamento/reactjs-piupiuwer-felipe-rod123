@@ -28,7 +28,7 @@ const Piu: React.FC<PiuProps> = (PiuProps) => {
    return(
       <div className="piu">
          <div className="post">
-            <User 
+            {/* <User 
                id= {useAuth().user.id}
                username= {useAuth().user.username}
                first_name= {useAuth().user.first_name}
@@ -42,7 +42,11 @@ const Piu: React.FC<PiuProps> = (PiuProps) => {
                followers= {useAuth().user.followers}
                favorites= {useAuth().user.favorites}
             
-            />
+            /> */}
+            <div className="user-profile">
+               <img src={PiuProps.user.photo} alt="Foto de perfil" />
+               <h2>{PiuProps.user.username}</h2>
+            </div>
             
             <div className="delete-button-container">
                <button className="delete-button">Excluir</button>
@@ -55,7 +59,9 @@ const Piu: React.FC<PiuProps> = (PiuProps) => {
             <div className="post-footer">
                <div className="like-container">
                   <button className="like-button">
-                     <img src={likeImg} alt="Curtir" />
+                     <img src={likeImg} alt="Curtir" onClick={() => {
+
+                     }}/>
                   </button>
 
                   <span>{PiuProps.likes.length} pessoas curtiram isso</span>
@@ -63,7 +69,9 @@ const Piu: React.FC<PiuProps> = (PiuProps) => {
 
                <div className="favorite-container">
                   <button className="favorite-button">
-                     <img src={favoriteImg} alt="Adicionar aos favoritos" />
+                     <img src={favoriteImg} alt="Adicionar aos favoritos" onClick={() => {
+                        
+                     }}/>
                   </button>
                </div>
       
