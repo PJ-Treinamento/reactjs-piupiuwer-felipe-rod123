@@ -20,14 +20,6 @@ export default function Login(){
       login({email, password});
    }
    
-   // const signIn = async () =>{
-   //    const token = await api.post('/sessions/login', { email: email, password: password })
-   //    .catch(() => {
-   //       alert("Login ou senha inválidos!");
-   //   });
-   //   console.log(token);
-   //}
-   
    return(
       <div className="login">
          <div className="logo-container">

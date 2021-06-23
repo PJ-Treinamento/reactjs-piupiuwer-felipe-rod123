@@ -15,7 +15,7 @@ import './styles.css';
 const Feed = () => {
    const [pius, setPius] = useState<PiuProps[]>([]);
    const storedToken = localStorage.getItem('@Project:token');
-   console.log(storedToken);
+   //console.log(storedToken);
 
    useEffect(() => {
       const loadData = async () => {

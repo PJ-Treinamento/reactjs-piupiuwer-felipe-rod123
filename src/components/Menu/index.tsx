@@ -6,6 +6,7 @@ import './styles.css';
 import logoImg from '../../assets/images/logo.svg';
 import optionsImg from '../../assets/icons/options.svg';
 import closeOptionsImg from '../../assets/icons/close.svg';
+import { useAuth } from "../../hooks/auth";
 
 export default function Menu(){
    var showMenu = true;
@@ -23,6 +24,11 @@ export default function Menu(){
    //    }
    // } onClick={() => handleMenu()}
 
+   const signOut = () =>{
+      localStorage.removeItem('@Project:user');
+      localStorage.removeItem('@Project:token');
+   }
+
    return(
       <div className="menu">
          <div className="nav-bar">
@@ -32,12 +38,12 @@ export default function Menu(){
 
          <div className="menu-options" style={{display: showMenu ? 'flex' : 'none' }}>
             <ul>
-               <li><Link to=''>Meu perfil</Link></li>
-               <li><Link to=''>Minha atividade</Link></li>
-               <li><Link to=''>Configurações</Link></li>
-               <li><Link to=''>Ajuda</Link></li>
-               <li><Link to=''>Idioma</Link></li>
-               <li><Link to='/login' id="logout-button">Sair</Link></li>
+               <li><Link to='/feed'>Meu perfil</Link></li>
+               <li><Link to='/feed'>Minha atividade</Link></li>
+               <li><Link to='/feed'>Configurações</Link></li>
+               <li><Link to='/feed'>Ajuda</Link></li>
+               <li><Link to='/feed'>Idioma</Link></li>
+               <li><Link to='/login' id="logout-button" onClick={signOut}>Sair</Link></li>
             </ul>
          </div>
       </div>

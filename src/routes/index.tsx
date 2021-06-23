@@ -12,7 +12,7 @@ const Routes: React.FC = () => {
 				<Switch>
 	        <Route path="/login" component={Login} />
 	
-	        <Route path="/feed" component={Feed} isPrivate />
+	        <Route path="/" component={Feed} isPrivate />
 				</Switch>
     );
 }
