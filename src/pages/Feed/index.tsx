@@ -14,14 +14,21 @@ import './styles.css';
 
 const Feed = () => {
    const [pius, setPius] = useState<PiuProps[]>([]);
+   const storedToken = localStorage.getItem('@Project:token');
+   console.log(storedToken);
 
    useEffect(() => {
       const loadData = async () => {
-         const response = await api.get('/pius');
+         const response = await api.get('/pius', {
+            headers: {
+               'Authorization': `Bearer ${storedToken}`
+            }
+          });
          setPius(response.data);
       }
       loadData();
    }, [])
+
 
    return(
       <div id="page-feed">
@@ -35,12 +42,12 @@ const Feed = () => {
             <div className="add-post-container">
                <AddPost/>
             </div>
-{/* USAR STYLED COMP */}
             <div className="posts-container">               
                   {
                      pius.map(piu => {
                         return(
                               <Piu
+                                 key = {piu.id}
                                  id= {piu.id}
                                  user= {piu.user}
                                  likes= {piu.likes}

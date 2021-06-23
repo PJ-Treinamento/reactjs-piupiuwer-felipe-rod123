@@ -1,38 +1,74 @@
-import { createContext, useState } from "react";
+import { createContext, useContext, useState } from "react";
+import { UserProps } from "../components/User";
 import api from "../services/api";
 
-// const AuthContext = createContext<AuthContextData>({} as AuthContextData);
+interface LoginCredentials{
+  email: string,
+  password: string,
+  login(LoginCred: LoginCredentials): boolean
+}
 
-// export const AuthProvider: React.FC = ({ children }) => {
+interface AuthContextData{
+  id: string,
+  user: UserProps,
+  token: string,
+}
 
-// 	const [userData, setUserData] = useState<AuthState>(() => {
-//         const token = localStorage.getItem('@Project:token');
-//         const user = localStorage.getItem('@Project:user');
+interface AuthState{
+  user: UserProps,
+  token: string
+}
 
-//         if (user && token) {
-//             return { token, user: JSON.parse(user) };
-//         }
+const AuthContext = createContext<AuthContextData>({} as AuthContextData);
 
-//         return {} as AuthState;
-//   });
+export const AuthProvider: React.FC = ({ children }) => {
 
-// 	const login = async ({ email, password }: LoginCredentials) => {
-//       const response = await api.post('/login/', {
-//           email,
-//           password,
-//       });
+	const [userData, setUserData] = useState<AuthState>(() => {
+        const token = localStorage.getItem('@Project:token');
+        const user = localStorage.getItem('@Project:user');
 
-//       const { token, user } = response.data;
-//       localStorage.setItem('@Project:token', token);
-//       localStorage.setItem('@Project:user', JSON.stringify(user));
+        if (user && token) {
+            return { token, user: JSON.parse(user) };
+        }
 
-//       setUserData({ token, user });
-//   };
-// }
+        return {} as AuthState;
+  });
 
-// const logout = () => {
-//    localStorage.removeItem('@Project:user');
-//    localStorage.removeItem('@Project:token');
+	const login = async ({ email, password }: LoginCredentials) => {
+      const response = await api.post('/sessions/login', {
+          email,
+          password,
+      })
 
-//    setUserData({} as AuthState);
-// });
+      const { token, user } = response.data;
+      setUserData({token, user});
+
+      localStorage.setItem('@Project:token', token);
+      localStorage.setItem('@Project:user', JSON.stringify(user));
+
+      setUserData({ token, user });
+  };
+
+  const logout = () => {
+    localStorage.removeItem('@Project:user');
+    localStorage.removeItem('@Project:token');
+ 
+   setUserData({} as AuthState);
+ }
+
+  return(
+    <AuthContext.Provider value={{
+      login,
+      user: userData.user,
+      token: userData.token
+    }}>
+      {children}
+    </AuthContext.Provider>
+  )
+
+}
+
+export const useAuth = ():AuthContextData =>{
+  const useAuthContext = useContext(AuthContext)
+  return useAuthContext
+}

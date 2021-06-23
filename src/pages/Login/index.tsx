@@ -5,18 +5,25 @@ import './styles.css';
 import logoImg from '../../assets/images/logo.svg';
 import nextImg from '../../assets/icons/next.svg';
 import api from "../../services/api";
+// import { signIn } from "../../hooks/signIn";
+import { Link } from "react-router-dom";
+import { useAuth } from "../../hooks/auth";
+
 
 export default function Login(){
    const [email, setEmail] = useState('');
    const [password, setPassword] = useState('');
+
+   const {login} = useAuth();
+   login({email, password});
    
-   const handleLogin = async () =>{
-      const token = await api.post('/sessions/login', { email: email, password: password })
-      .catch(() => {
-         alert("Login ou senha inválidos!");
-     });
-     //console.log(token);
-   }
+   // const signIn = async () =>{
+   //    const token = await api.post('/sessions/login', { email: email, password: password })
+   //    .catch(() => {
+   //       alert("Login ou senha inválidos!");
+   //   });
+   //   console.log(token);
+   //}
    
    return(
       <div className="login">
@@ -43,9 +50,9 @@ export default function Login(){
          </div>
 
          <div className="login-button-container">
-            <button id="login-button">
-               <img src={nextImg} alt="Entrar" onClick={handleLogin}/>
-            </button>
+            <Link id="login-button" to='/feed'>
+               <img src={nextImg} alt="Entrar" onClick={signIn}/>
+            </Link>
          </div>
          
       </div>

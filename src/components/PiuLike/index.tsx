@@ -1,12 +1,12 @@
 import React from "react";
 
-import Piu from "../Piu";
-import User from "../User";
+import Piu, { PiuProps } from "../Piu";
+import User, { UserProps } from "../User";
 
-interface PiuLikeProps {
-	// id: string;
-	// user: User;
-	// piu: Piu;
+export interface PiuLikeProps {
+	id: string;
+	user: UserProps;
+	piu: PiuProps;
 }
 
 const PiuLike: React.FC<PiuLikeProps>= (PiuLikeProps) =>{

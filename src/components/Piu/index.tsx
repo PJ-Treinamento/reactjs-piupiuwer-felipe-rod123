@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from "react";
-import axios, { AxiosResponse } from "axios";
 
 
 import './styles.css';
@@ -10,13 +9,14 @@ import favoriteImg from '../../assets/icons/favorite.svg';
 import favoriteFullImg from '../../assets/icons/favoriteFull.svg';
 
 import PiuLike from "../PiuLike";
-import User from "../User";
+import User, { UserProps } from "../User";
 import api from "../../services/api";
+import { useAuth } from "../../hooks/auth";
 
 
 export interface PiuProps {
 	id: string;
-	user: typeof User;
+	user: UserProps;
 	likes: typeof PiuLike[];
 	text: string;
 	created_at: Date;
@@ -28,7 +28,21 @@ const Piu: React.FC<PiuProps> = (PiuProps) => {
    return(
       <div className="piu">
          <div className="post">
-            <User />
+            <User 
+               id= {useAuth().user.id}
+               username= {useAuth().user.username}
+               first_name= {useAuth().user.first_name}
+               last_name= {useAuth().user.last_name}
+               email= {useAuth().user.email}
+               about= {useAuth().user.about}
+               photo= {useAuth().user.photo}
+               pius= {useAuth().user.pius}
+               likes= {useAuth().user.likes}
+               following= {useAuth().user.following}
+               followers= {useAuth().user.followers}
+               favorites= {useAuth().user.favorites}
+            
+            />
             
             <div className="delete-button-container">
                <button className="delete-button">Excluir</button>
