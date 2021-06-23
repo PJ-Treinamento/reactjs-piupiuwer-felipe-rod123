@@ -5,13 +5,12 @@ import api from "../services/api";
 interface LoginCredentials{
   email: string,
   password: string,
-  login(LoginCred: LoginCredentials): boolean
 }
 
 interface AuthContextData{
-  id: string,
   user: UserProps,
   token: string,
+  login(loginCred: LoginCredentials): void
 }
 
 interface AuthState{

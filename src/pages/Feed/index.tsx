@@ -43,10 +43,11 @@ const Feed = () => {
                <AddPost/>
             </div>
             <div className="posts-container">               
+                  <ul>
                   {
                      pius.map(piu => {
                         return(
-                              <Piu
+                              <li><Piu
                                  key = {piu.id}
                                  id= {piu.id}
                                  user= {piu.user}
@@ -54,10 +55,11 @@ const Feed = () => {
                                  text= {piu.text}
                                  created_at= {piu.created_at}
                                  updated_at= {piu.updated_at}
-                              />
+                              /></li>
                         );
                      })
                   }
+                  </ul>
             </div>
 
          </div>

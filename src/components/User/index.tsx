@@ -23,7 +23,7 @@ export interface UserProps {
 const User: React.FC<UserProps> = (UserProps) =>{
 	return(
       <div className="user-profile">
-			<img src={UserProps.photo==='' ? avatarImg : UserProps.photo} alt="Foto de perfil" />
+			<img src={avatarImg} alt="Foto de perfil" />
 			<h2>{UserProps.username}</h2>
          
       </div>

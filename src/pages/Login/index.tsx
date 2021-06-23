@@ -15,7 +15,10 @@ export default function Login(){
    const [password, setPassword] = useState('');
 
    const {login} = useAuth();
-   login({email, password});
+
+   const signIn = () =>{
+      login({email, password});
+   }
    
    // const signIn = async () =>{
    //    const token = await api.post('/sessions/login', { email: email, password: password })
