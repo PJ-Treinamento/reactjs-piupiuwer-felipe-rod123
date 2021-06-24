@@ -6,7 +6,10 @@ import { useState, useEffect } from "react";
 import AddPost from "../../components/AddPost";
 import Menu from "../../components/Menu";
 import Piu, { PiuProps } from "../../components/Piu";
+import PiuLike from "../../components/PiuLike";
 import SearchBox from "../../components/SearchBox";
+import User, {UserProps} from "../../components/User";
+import { useAuth } from "../../hooks/auth";
 
 import api from "../../services/api";
 
@@ -27,7 +30,7 @@ const Feed = () => {
          setPius(response.data);
       }
       loadData();
-   }, [])
+   }, [PiuLike])
 
 
    return(
@@ -83,3 +86,18 @@ const Feed = () => {
 }
 
 export default Feed;
+
+{/* <User 
+      id= {useAuth().user.id}
+      username= {useAuth().user.username}
+      first_name= {useAuth().user.first_name}
+      last_name= {useAuth().user.last_name}
+      email= {useAuth().user.email}
+      about= {useAuth().user.about}
+      photo= {useAuth().user.photo}
+      pius= {useAuth().user.pius}
+      likes= {useAuth().user.likes}
+      following= {useAuth().user.following}
+      followers= {useAuth().user.followers}
+      favorites= {useAuth().user.favorites}
+      /> */}

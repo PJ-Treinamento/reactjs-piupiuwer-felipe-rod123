@@ -45,7 +45,7 @@ export default function Login(){
          </div>
 
          <div className="login-button-container">
-            <Link id="login-button" to='/feed'>
+            <Link id="login-button" to='/'>
                <img src={nextImg} alt="Entrar" onClick={signIn}/>
             </Link>
          </div>

@@ -1,4 +1,6 @@
 .search-box-container{
+   position: relative;
+   right: 0.8vw;
    margin-top: 2.4rem;
    margin-bottom: 2.4rem;
    display: inline-flex;

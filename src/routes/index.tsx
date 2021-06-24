@@ -5,14 +5,16 @@ import Route from './Route';
 
 import Login from '../pages/Login';
 import Feed from '../pages/Feed';
+import MyProfile from '../pages/MyProfile';
 
 
 const Routes: React.FC = () => {
     return (
 				<Switch>
 	        <Route path="/login" component={Login} />
+	        <Route path="/myprofile" component={MyProfile} />
 	
-	        <Route path="/" component={Feed} isPrivate />
+	        <Route exact path="/" component={Feed} isPrivate />
 				</Switch>
     );
 }

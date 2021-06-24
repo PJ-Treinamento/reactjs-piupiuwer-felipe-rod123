@@ -11,6 +11,7 @@ interface AuthContextData{
   user: UserProps,
   token: string,
   login(loginCred: LoginCredentials): void
+  logout(logoutCred: boolean): void
 }
 
 interface AuthState{
@@ -58,6 +59,7 @@ export const AuthProvider: React.FC = ({ children }) => {
   return(
     <AuthContext.Provider value={{
       login,
+      logout,
       user: userData.user,
       token: userData.token
     }}>

@@ -7,6 +7,7 @@ import logoImg from '../../assets/images/logo.svg';
 import optionsImg from '../../assets/icons/options.svg';
 import closeOptionsImg from '../../assets/icons/close.svg';
 import { useAuth } from "../../hooks/auth";
+import MyProfile from "../../pages/MyProfile";
 
 export default function Menu(){
    var showMenu = true;
@@ -24,10 +25,14 @@ export default function Menu(){
    //    }
    // } onClick={() => handleMenu()}
 
+   const [exit, setExit] = useState(false);
+   const {logout} = useAuth();
+
    const signOut = () =>{
-      localStorage.removeItem('@Project:user');
-      localStorage.removeItem('@Project:token');
+      logout(exit);
    }
+
+   
 
    return(
       <div className="menu">
@@ -38,8 +43,8 @@ export default function Menu(){
 
          <div className="menu-options" style={{display: showMenu ? 'flex' : 'none' }}>
             <ul>
-               <li><Link to='/feed'>Meu perfil</Link></li>
-               <li><Link to='/feed'>Minha atividade</Link></li>
+               <li><Link to='/myprofile'>Meu perfil</Link></li>
+               <li><Link to='/myprofile'>Minha atividade</Link></li>
                <li><Link to='/feed'>Configurações</Link></li>
                <li><Link to='/feed'>Ajuda</Link></li>
                <li><Link to='/feed'>Idioma</Link></li>

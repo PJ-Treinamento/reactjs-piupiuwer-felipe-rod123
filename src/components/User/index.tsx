@@ -23,8 +23,11 @@ export interface UserProps {
 const User: React.FC<UserProps> = (UserProps) =>{
 	return(
       <div className="user-profile">
-			<img src={avatarImg} alt="Foto de perfil" />
-			<h2>{}</h2>
+			<img src={UserProps.photo} alt="Foto de perfil" />
+			<h3>{UserProps.username}</h3>
+			<h3>{UserProps.first_name}</h3>
+			<h3>{UserProps.last_name}</h3>
+			<h3>{UserProps.about}</h3>
       </div>
    );
 }

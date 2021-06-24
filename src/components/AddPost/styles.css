@@ -21,14 +21,44 @@
    margin-left: 1.6rem;
 }
 
-#piu-text-area{
-   display: block;
+.write-post-container{
+   display: flex;
+   justify-self: center;
+   justify-content: center;
+   align-content: center;
+
+   width: 64vw;
+   height: 56vh;
    position: relative;
-   right: 39vh;
-   margin: 2.4rem;
-   background: var(--color-primary-light);
-   border-color: var(--color-primary-dark);
-   border-radius: 1.6rem 1.6rem;
+   right: 2.4vw;
+   background-color: gray; 
+   /* var(--color-primary-dark) */
+   font: 400 1.6rem Nunito;
+   color: var(--color-text-lighter);
+
+   display: flex;
+   justify-self: center;
+   align-self: center;
+
+   border-radius: 5.6rem;
+   margin: 1.6rem;
+   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.05), 0 6px 20px 0 rgba(0, 0, 0, 0.05);
+   border-style: none;
+   text-align: center;
+}
+
+#piu-text-area{
+   width: 56vw;
+   height: 32vh;
+   position: relative;
+   top: 10rem;
+   background-color: greenyellow; 
+   font: 400 1.6rem Nunito;
+   color: var(--color-text-lighter);
+
+   justify-self: center;
+   align-self: center;
+
 }
 
 #send-button{
@@ -63,5 +93,13 @@
       color: var(--color-text-title);
       align-self: center;
       margin-left: 1.6rem;
+   }
+
+   .write-post-container{
+      width: 80vw;
+      height: 56vh;
+      position: relative;
+      right: 2.4vw;
+      margin: 1.6rem;
    }
 }
