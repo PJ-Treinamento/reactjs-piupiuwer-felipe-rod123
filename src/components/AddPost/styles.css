@@ -31,7 +31,7 @@
    height: 56vh;
    position: relative;
    right: 2.4vw;
-   background-color: gray; 
+   background-color: var(--color-primary-dark); 
    /* var(--color-primary-dark) */
    font: 400 1.6rem Nunito;
    color: var(--color-text-lighter);
@@ -47,13 +47,29 @@
    text-align: center;
 }
 
+.title-new-post{
+   margin-top: 3.2rem;
+   font: 400 1.6rem Poppins;
+   color: var(--color-text-lighter);
+}
+
+.count-letters{
+   font: 400 1.2rem Poppins;
+   color: var(--color-text-lighter);
+}
+
 #piu-text-area{
    width: 56vw;
    height: 32vh;
    position: relative;
-   top: 10rem;
-   background-color: greenyellow; 
-   font: 400 1.6rem Nunito;
+   top: 3.2rem;
+   border-radius: 2rem;
+   border-style: solid;
+   border-color: var(--color-primary-ligth);
+   border-width: 0.2rem;
+   background-color: var(--color-primary-dark); 
+   font: 400 2rem Nunito;
+   text-align: center;
    color: var(--color-text-lighter);
 
    justify-self: center;
@@ -66,11 +82,16 @@
    width: 6rem;
    height: 6rem;
    border-style: none;
-   right: 30vh;
+   left: 56vw;
    background-color: var(--color-button);
    border-radius: 50%;
    font: 600 1.6rem Nunito;
    color: var(--color-text-lighter);
+}
+
+#send-button:hover{
+   width: 6.4rem;
+   height: 6.4rem;
 }
 
 @media (max-width: 700px) {
